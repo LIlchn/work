@@ -1,0 +1,351 @@
+.App {
+  background-color: #0f5daa;
+}
+
+.MainPage {
+  background-color: #e9ecef;
+  justify-content: left;
+  color: rgb(0, 0, 0);
+}
+
+.FooterPage {
+  background-color: #0d0e11;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+.jumbotron-main {
+  min-height: 85vh;
+  padding: 50px;
+}
+
+.jumbotron-acc {
+  min-height: 65vh;
+}
+
+.main-main-cont {
+  background-color: #c51f1f;
+  width: 100%;
+}
+.main-cont {
+  background-color: #e9ecef;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+}
+
+.login-cont {
+  background-image: url("https://www.bluepixel.com.au/wp-content/uploads/2017/12/Blue-Pixel-text-background-polygonal-dark-grey.jpg");
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(248, 248, 248);
+}
+
+.ProfilePage {
+  background-color: #e9ecef;
+  min-height: 80vh;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  margin-left: 8vh;
+  max-width: 170vh;
+}
+
+.jumbotron-prof {
+  min-height: 15vh;
+}
+
+.display-4 {
+  margin-top: 0vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-5 {
+  display: flex;
+  margin-top: 0vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.Vac-page {
+  background-color: #e9ecef;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  font-size: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  line-height: 2;
+}
+
+li {
+  list-style-type: disc;
+}
+
+ul {
+  list-style-position: outside;
+}
+
+.grtext {
+  color: rgb(167, 167, 167);
+  font-style: italic;
+}
+
+#uncontrolled-tab-example {
+  background-color: #c51f1f;
+}
+
+.CvFormCont {
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 200vh;
+}
+
+.CvForm {
+  width: 70vh;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+}
+
+.form-label {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-content {
+  width: 100%;
+}
+
+.RegFormGr {
+  padding: 25px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.VacCrFormGr {
+  background-color: #c51f1f;
+  width: 100%;
+}
+
+.Killmepls {
+  margin-top: 5vh;
+  max-width: 50vh;
+  text-align: center;
+  font-size: 22px;
+  margin-left: 80vh;
+  justify-content: center;
+}
+
+b {
+}
+
+.site-footer {
+  background-color: #262529;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 27px;
+  color: #737373;
+}
+
+.site-footer hr {
+  border-top-color: rgb(223, 223, 223);
+  opacity: 0.3;
+}
+
+.site-footer h6 {
+  color: rgb(233, 233, 233);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.site-footer a {
+  color: #737373;
+}
+.site-footer a:hover {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.Tabbbbs {
+  font-size: 18px;
+  width: 100%;
+  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  background-color: #e9ecef;
+}
+
+.NewVacsCard {
+  background-color: #ffffff;
+  width: 125vh;
+  height: 100%;
+  margin: 2rem;
+  font-size: 17px;
+  padding: 20px;
+  border-radius: 4px;
+  padding: 20px 50px 28px 16px;
+  line-height: 150%;
+}
+
+.NewVacsCard:hover {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+.NewVacsCard_Category {
+  color: #fff;
+  background: #313131;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.newvacsbody {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background: #eeeeee;
+  align-items: center;
+  margin: 5px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #333332;
+  font-family: Lora, serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.left {
+  background-color: rgba(0, 0, 0, 0.025);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  margin-left: -1px;
+  min-width: 256px;
+  position: fixed;
+  width: 20%;
+}
+
+.right {
+  float: right;
+  height: 100%;
+  position: relative;
+  width: 80%;
+  padding: 15px;
+}
+
+.me-img {
+  background-size: 100%;
+  background-position: 0px;
+  border-radius: 100%;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  width: 150px;
+}
+
+.name-hero h1 {
+  font-family: Open Sans, sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+.name-hero p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+  line-height: 2;
+  margin: 0 8px 0 0;
+  text-align: center;
+}
+
+.name-hero .name-text {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1510px;
+  padding: 3em;
+}
+
+.inner h1 {
+  font-size: 2em;
+}
+
+.inner p {
+  color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+
+.inner section {
+  margin: 100px auto;
+  padding: 0;
+  min-width: 1000px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: -10px;
+  max-width: 570px;
+}
+
+.skill-set li {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  list-style: none;
+  margin: 15px 15px 0 0;
+  padding: 10px;
+  text-align: justify;
+}

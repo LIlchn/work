@@ -1,0 +1,80 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"],
+        "moduleDirectory": ["node_modules", "src/", "client/src/", "server/"]
+      }
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "react-app",
+    "prettier"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "import"],
+
+  "rules": {
+    "comma-dangle": [
+      "error",
+      {
+        "objects": "always-multiline",
+        "arrays": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "import/no-unresolved": [
+      2,
+      {
+        "commonjs": true,
+        "amd": true
+      }
+    ],
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+
+    "jsx-a11y/anchor-is-valid": [
+      "off",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ],
+
+    // "indent": ["error", 2],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"]
+
+
+    // "no-undef": ["error", "always"],
+    // "no-unused-vars": ["error", "always"]
+  }
+}
