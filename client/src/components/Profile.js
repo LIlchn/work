@@ -8,11 +8,9 @@ import { useFetch } from "hooks/useFetch";
 import { AuthContext } from "context/AuthContext";
 
 const Profile = () => {
-  const { user } = useContext(AuthContext);
+  const { user, updateCV } = useContext(AuthContext);
 
   const [getProfileVacancies, { data: vacanciesPersonal }] = useFetch();
-
-  console.log("user", user);
 
   useEffect(() => {
     getProfileVacancies("get", "vacancies/personal");
@@ -24,8 +22,6 @@ const Profile = () => {
     watch,
     formState: { errors },
   } = useForm();
-
-  const history = useHistory();
 
   const [changeCV] = useFetch();
 
@@ -53,7 +49,14 @@ const Profile = () => {
       return;
     }
 
-    history.push("/profile");
+    updateCV({
+      title,
+      profession,
+      keyInfo,
+      language,
+      experience,
+      salary,
+    });
   };
 
   return (
@@ -150,7 +153,7 @@ const Profile = () => {
               />
             </Form.Group>
 
-            <Button variant="dark" type="submit" href="/">
+            <Button variant="dark" type="submit">
               Зберегти
             </Button>
           </div>

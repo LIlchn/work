@@ -5,6 +5,7 @@ import "./style.css";
 import SignUpPage from "pages/auth/SignUpPage";
 import LogInPage from "pages/auth/LogInPage";
 import HomePage from "pages/HomePage";
+import CVsPage from "pages/CVsPage";
 import VacancyCreationPage from "pages/VacancyCreationPage";
 import { AuthenticationProvider } from "./context/AuthContext";
 import Profile from "components/Profile";
@@ -15,8 +16,8 @@ import Layout from "modules/Layout";
 import { AnonymousRoute, PublicRoute, PrivateRoute } from "routes";
 import CVCreation from "pages/CVCreation";
 import NewVacs from "pages/NewVacs";
-import ResumePage from "components/ResumePage";
 import NewCV from "pages/NewCV";
+import CVPage from "pages/CVPage";
 
 const App = () => {
   return (
@@ -50,10 +51,6 @@ const App = () => {
               <VacancyCreationPage />
             </PublicRoute>
 
-            <PublicRoute path="/resumepage">
-              <ResumePage />
-            </PublicRoute>
-
             <AnonymousRoute path="/register">
               <SignUpPage />
             </AnonymousRoute>
@@ -66,14 +63,17 @@ const App = () => {
               <Profile />
             </PrivateRoute>
 
+            <PublicRoute path="/user/:id" exact>
+              <CVPage />
+            </PublicRoute>
+
             <PublicRoute path="/newvacs">
               <NewVacs />
             </PublicRoute>
 
             <PublicRoute path="/newcv">
-              <NewCV />
+              <CVsPage />
             </PublicRoute>
-            
           </Switch>
         </Layout>
       </BrowserRouter>

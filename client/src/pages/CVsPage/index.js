@@ -5,7 +5,10 @@ import { useFetch } from "hooks/useFetch";
 import { Link } from "react-router-dom";
 import Search from "components/Search";
 
-const NewCV = () => {
+import * as ScCVsPage from "./styled";
+import CVCard from "cards/CVCard";
+
+const CVsPage = () => {
   const [getUsersRequest, { data: users }] = useFetch();
 
   const [sortedUsers, setSortedUsers] = useState(users);
@@ -23,7 +26,7 @@ const NewCV = () => {
   if (sortedUsers == null) return null;
 
   return (
-    <main className="newvacsbody">
+    <ScCVsPage.ScCVsPage>
       <Search
         searchData={users}
         searchKeys={["cv.title", "cv.profession"]}
@@ -38,25 +41,27 @@ const NewCV = () => {
         console.log("cv", cv);
 
         return (
-          <div className="NewVacsCard" key={user._id}>
-            <div className="NewVacsCard_Category">
-              <h2>{user.name}</h2>
-            </div>
-            <p className="grtext">Повне ім'я:</p>
-            <div className="NewVacsCard_Main">
-              <b>Some Name</b>
-            </div>
-            <hr></hr>
-            <p className="grtext">Рівень розробника:</p>
-            <b>Middle</b> <hr></hr>
-            <Link to={`user/${user._id}`} className="NewVacsCard_Link">
-              Дивитись повністю
-            </Link>
-          </div>
+          <CVCard user={user} cv={cv} key={user._id} />
+
+          //   <div className="NewVacsCard" key={user._id}>
+          //     <div className="NewVacsCard_Category">
+          //       <h2>{user.name}</h2>
+          //     </div>
+          //     <p className="grtext">Повне ім'я:</p>
+          //     <div className="NewVacsCard_Main">
+          //       <b>Some Name</b>
+          //     </div>
+          //     <hr></hr>
+          //     <p className="grtext">Рівень розробника:</p>
+          //     <b>Middle</b> <hr></hr>
+          //     <Link to={`user/${user._id}`} className="NewVacsCard_Link">
+          //       Дивитись повністю
+          //     </Link>
+          //   </div>
         );
       })}
-    </main>
+    </ScCVsPage.ScCVsPage>
   );
 };
 
-export default NewCV;
+export default CVsPage;

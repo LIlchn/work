@@ -9,6 +9,25 @@ const router = Router();
 const auth = require("../middleware/auth.middleware");
 const User = require("../models/User");
 
+// @route GET api/vacancies
+// @description Get all users
+// @access Public
+router.get("/", (req, res) => {
+  User.find()
+    .then((users) => {
+      return res.status(200).json(users);
+    })
+    .catch(() => res.status(404).json({ nousersfound: "No users found" }));
+});
+
+router.get("/:id", (req, res) => {
+  User.findById(req.params.id)
+    .then((user) => {
+      return res.status(200).json(user);
+    })
+    .catch(() => res.status(404).json({ nouserfound: "No user found" }));
+});
+
 router.post(
   "/register",
   [
@@ -128,7 +147,12 @@ router.put("/cv", auth, async (req, res) => {
 
     await User.findByIdAndUpdate(ownerID, {
       cv: {
-        title, profession, keyInfo, language, experience, salary
+        title,
+        profession,
+        keyInfo,
+        language,
+        experience,
+        salary,
       },
     });
 

@@ -12,13 +12,23 @@ export function AuthenticationProvider({ children }) {
     null
   );
 
-  const logIn = useCallback((userData) => setIsAuthenticated(userData), [
-    setIsAuthenticated,
-  ]);
+  const logIn = useCallback(
+    (userData) => setIsAuthenticated(userData),
+    [setIsAuthenticated]
+  );
 
-  const logOut = useCallback(() => setIsAuthenticated(null), [
-    setIsAuthenticated,
-  ]);
+  const logOut = useCallback(
+    () => setIsAuthenticated(null),
+    [setIsAuthenticated]
+  );
+
+  const updateCV = useCallback(
+    (cvInfo) =>
+      setIsAuthenticated(() => {
+        return { ...isAuthenticated, cv: cvInfo };
+      }),
+    [setIsAuthenticated, isAuthenticated]
+  );
 
   return (
     <AuthContext.Provider
@@ -27,6 +37,7 @@ export function AuthenticationProvider({ children }) {
         user: isAuthenticated,
         logIn,
         logOut,
+        updateCV,
       }}
     >
       {children}

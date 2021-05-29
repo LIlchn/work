@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
   ${reset}
 
   :root{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
   *, &:before, &:after {
     box-sizing: border-box;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
